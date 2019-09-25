@@ -1,0 +1,22 @@
+<div class="card">
+
+  <h2>{{index}} {{card.title}}</h2>
+
+  <p class="text">{{card.text}}</p>
+
+  <div class="buttons">
+    <button (click)="changeTitle()">Change title</button>
+    <button (click)="title = ' Inline title'">Change title inline</button>
+  </div>
+
+  <!-- <div>
+    <input type="text" (input)="inputHandler($event)"[value]= "title">
+  </div> -->
+
+<div>
+    <input type="text" [(ngModel)]="card.title" >
+</div>
+<div>
+  <strong>{{cardDate | date }}</strong>
+</div>
+</div>
